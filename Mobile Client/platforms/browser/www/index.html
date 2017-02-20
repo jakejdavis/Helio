@@ -1,0 +1,56 @@
+<html>
+<head>
+ <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Helio - Login</title>
+  <meta name="description" content="A simple instant messenger">
+  <meta name="author" content="Jake Davis">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Scripts
+  -------------------------------------------------- -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://cdn.rawgit.com/emn178/js-sha1/master/build/sha1.min.js"></script>
+  <script>
+    if (!(localStorage.getItem("username") === null && localStorage.getItem("token") === null && localStorage.getItem("channel") === null)) {
+      var url = "https://helio-server.herokuapp.com/get_data?channel=" + localStorage.getItem("channel") + "&username=" + localStorage.getItem("username") + "&token=" + localStorage.getItem("token");
+      $.getJSON(url, function(data) {
+        if (data.token == "good") {
+          window.location.replace("chat.html");
+        } else {
+          localStorage.clear();
+		  window.location.replace("login.html")
+        }
+      });
+    } else {
+	  window.location.replace("login.html")
+	}
+  window.location.replace("login.html")
+  </script>
+</head>
+<body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <img id="splash-image" src="images/promo.png" width="100%" height="auto">
+  
+</body>
+</html>

@@ -1,0 +1,20 @@
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\bin\Debug\Helio.exe
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\bin\Debug\Helio.pdb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\bin\Debug\Helio.xml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\frmChat.baml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\frmLogin.baml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\frmSplash.baml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\frmApplication.baml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\frmChat.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\frmLogin.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\frmSplash.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\frmApplication.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio_MarkupCompile.cache
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio_MarkupCompile.lref
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio.g.resources
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio.Resources.resources
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio Windows.vbproj.GenerateResource.Cache
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio.exe
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio.xml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio.pdb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Debug\Helio Windows.vbprojResolveAssemblyReference.cache

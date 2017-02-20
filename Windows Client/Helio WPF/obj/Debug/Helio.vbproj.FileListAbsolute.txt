@@ -1,0 +1,15 @@
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\bin\Debug\Helio.exe
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\bin\Debug\Helio.pdb
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\bin\Debug\Helio.xml
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio.vbprojResolveAssemblyReference.cache
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\MainWindow.g.vb
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Application.g.vb
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio_MarkupCompile.cache
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio_MarkupCompile.lref
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\MainWindow.baml
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio.g.resources
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio.Resources.resources
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio.vbproj.GenerateResource.Cache
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio.exe
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio.xml
+C:\Users\Jake\AppData\Local\Temporary Projects\Helio\obj\Debug\Helio.pdb

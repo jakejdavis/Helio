@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Helio - Login</title>
+  <meta name="description" content="A simple instant messenger">
+  <meta name="author" content="Jake Davis">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://cdn.rawgit.com/emn178/js-sha1/master/build/sha1.min.js"></script>
+  <script>
+    function setSuccessText (text) {
+      errorText.textContent = "";
+      successText.textContent = text;
+    }
+    function setErrorText (text) {
+      successText.textContent = "";  
+      errorText.textContent = text;
+    }
+    function login() {
+        loginButton.disabled = true;
+        var username = UsernameInput.value;
+        var password = PasswordInput.value;
+        setSuccessText("Logging in...");
+        var url = "https://helio-server.herokuapp.com/login?username="
+                   + username + "&password=" + sha1(password + username);
+        console.log(url)
+        $.getJSON(url, function( data ) {
+          console.log(data);
+          if (data.response == 200) {
+            
+            localStorage.setItem("username", username);
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("channel", "welcome");
+            
+            setSuccessText("Logged in, redirecting...");
+            window.location.replace('chat.html');
+          } else if (data.response == 500) {
+            setErrorText("500 - Server Error");    
+          } else if (data.response == 401) {
+            setErrorText("401 - Username and password do not match");
+          }
+          loginButton.disabled = false;
+        });
+    }
+    function register() {
+        var username = UsernameInput.value;
+        var password = PasswordInput.value;
+        
+        setSuccessText("Registering user...");
+        
+        var url = "https://helio-server.herokuapp.com/register?username="
+                   + username + "&password=" + sha1(password + username);
+        $.getJSON(url, function( data ) {
+          console.log(data);
+          if (data.response == 200) {
+            setSuccessText("Created user, you can now log in");
+          } else if (data.response == 500) {
+            setErrorText("500 - Server Error");    
+          } else if (data.response == 409) {
+            setErrorText("409 - Username already exists");
+          }
+        });
+    }
+  </script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="header">
+    <div id="header-text">
+        Login
+      </div>
+  </div>
+  <div class="con">
+    <div id="status" class="row">
+      <div id="error-status"></div>
+      <div id="success-status"></div>
+    </div>
+    <div class="row">
+      <input class="six columns" type="text" placeholder="Username" id="username-input" autocomplete="off" autofocus autocapitalize="none">
+    </div>
+    <div class="row">
+      <input class="six columns" type="password" placeholder="Password" id="password-input" autocomplete="off" autofocus autocapitalize="none">
+    </div>
+    <div class="row">
+      <input class="three columns button-primary" id="login-button" type="button" value="Login" onClick="login()">
+      <input class="three columns button-primary" id="register-button" type="button" value="Register" onClick="register()">
+    </div>
+  </div>
+<script>
+  var errorText = document.getElementById('error-status');
+  var successText = document.getElementById('success-status');  
+  var UsernameInput = document.getElementById('username-input');
+  var PasswordInput = document.getElementById('password-input');
+  var loginButton = document.getElementById('login-button');
+  var registerButton = document.getElementById('register-button');
+</script>
+</body>
+</html>

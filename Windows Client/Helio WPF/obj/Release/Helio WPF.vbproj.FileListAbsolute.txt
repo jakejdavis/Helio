@@ -1,0 +1,47 @@
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\bin\Release\Helio WPF.exe
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\bin\Release\Helio WPF.pdb
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\bin\Release\Helio WPF.xml
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Login.g.vb
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Application.g.vb
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio WPF_MarkupCompile.cache
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio WPF_MarkupCompile.lref
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Login.baml
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio WPF.g.resources
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio.Resources.resources
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio WPF.vbproj.GenerateResource.Cache
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio WPF.exe
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio WPF.xml
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio WPF.pdb
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Chat.g.vb
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Splash.g.vb
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\bin\x86\Release\Helio WPF.exe
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\bin\x86\Release\Helio WPF.pdb
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\bin\x86\Release\Helio WPF.xml
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\bin\x86\Release\Newtonsoft.Json.dll
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\bin\x86\Release\Newtonsoft.Json.xml
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Chat.baml
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Splash.baml
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Helio WPF\Helio WPF\obj\Release\Helio WPF.vbprojResolveAssemblyReference.cache
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF.exe
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF.xml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF.pdb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\bin\Release\imgBad.png
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\bin\Release\imgGood.png
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\bin\Release\Helio WPF.exe
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\bin\Release\Helio WPF.pdb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\bin\Release\Helio WPF.xml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF.vbprojResolveAssemblyReference.cache
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\frmChat.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\frmLogin.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\frmSplash.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\frmApplication.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF_Content.g.vb
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF_MarkupCompile.cache
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF_MarkupCompile.lref
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\frmApplication.baml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\frmChat.baml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\frmLogin.baml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\frmSplash.baml
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF.g.resources
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio.Resources.resources
+C:\Users\Jake\Google Drive\Home\Programming\Projects\Helio\Windows Client\Helio WPF\obj\Release\Helio WPF.vbproj.GenerateResource.Cache

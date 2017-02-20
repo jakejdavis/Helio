@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Helio - Chat</title>
+  <meta name="description" content="A simple instant messenger">
+  <meta name="author" content="Jake Davis">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/emn178/js-sha1/master/build/sha1.min.js"></script>
+  <script src="https://cdn.rawgit.com/benbarnett/jquery-animate-enhanced/master/jquery.animate-enhanced.min.js"></script>
+  <script>
+    function loadPP() {
+      imgPP.src = "https://www.gravatar.com/avatar/" + sha1(localStorage.getItem("username")) + "?d=retro&f=y";
+    }
+    function loadUsername() {
+      usernameText.textContent = localStorage.getItem("username");
+    }
+    function showSidebar() {
+        $(sidebar).addClass("visible")
+        $(overlay).fadeTo(250, 0.5);
+        var leftpx = document.documentElement.clientWidth * 0.75
+        $(sidebar).animate({left: "+=" + leftpx + "px", queue: true}, 250)     
+    }
+    function hideSidebar() {
+      if ($(sidebar).hasClass("visible")) {
+          //$("#sidebar").toggle("slide", { direction: "left", avoidTransforms: true}, 250);      
+          var leftpx = document.documentElement.clientWidth * 0.75
+          $(sidebar).animate({left: "-=" + leftpx + "px", queue: true}, 250)
+          $(overlay).fadeOut(250);
+          $(sidebar).removeClass("visible");
+      }
+    }
+    var lastMessageIdLoaded = 0;
+    function sendMessage() {
+      var messageContent = messageTextbox.value;
+      var url = "https://helio-server.herokuapp.com/snd_msg?content=" + messageContent + "&author=" + localStorage.getItem("username") + "&channel=" + "debug";
+      console.log(url);
+      $.getJSON(url, function(data) {
+          
+      });
+      messageTextbox.value = "";
+      scrollBottomOfMessages();
+      getData();
+    }
+    function changeChannel() {
+      lastMessageIdLoaded = 0;
+      messages.innerHTML = "";
+      var newChannel = channelTextbox.value;
+      localStorage.setItem("channel", newChannel);
+      getData();
+      hideSidebar();
+      scrollBottomOfMessages();
+    }
+    function getData() {
+      var messageTemplate = '<div class="row message"> \
+        <div class="profile-image"> \
+          <img src="https://www.gravatar.com/avatar/{{USER_PROFILE_PIC}}?d=retro&f=y" alt="Profile picture" width="48" height="auto"> \
+        </div> \
+        <div class="message-content"> \
+          <div class="message-author"> \
+            <b>{{USERNAME}}</b> \
+          </div> \
+          <div class="message-text"> \
+            {{MESSAGE_CONTENT}}  \
+          </div> \
+        </div> \
+      </div>';
+        var url = "https://helio-server.herokuapp.com/get_data?channel=" + localStorage.getItem("channel") + "&username=" + localStorage.getItem("username") + "&token=" + localStorage.getItem("token") + "&lastId=" + lastMessageIdLoaded;
+        console.log(url);
+      $.getJSON(url, function( data ) {
+        console.log(data);
+        if (data.token == "bad") {
+          window.location.replace('login.html');
+        }
+        scoreText.textContent = "Score: " + data.score;
+        var messages = document.getElementById("messages");
+        var scrolledDown = Boolean(messages.scrollTop === (messages.scrollHeight - messages.offsetHeight))
+      
+        for (var i in data.messages) {
+          var message = data.messages[i]
+          if (message.id > lastMessageIdLoaded) {
+            var messageHtml = messageTemplate.replace("{{USER_PROFILE_PIC}}", sha1(message.author))
+                                             .replace("{{USERNAME}}", message.author)
+                                             .replace("{{MESSAGE_CONTENT}}", message.content);
+            messages.innerHTML = messages.innerHTML + messageHtml;
+            lastMessageIdLoaded = message.id;
+            if (scrolledDown) {
+              scrollBottomOfMessages()
+            }
+          }
+        }
+      });    
+    }
+    window.setInterval(function(){
+      getData();
+      if (document.activeElement == messageTextbox) {
+        scrollBottomOfMessages();
+      }
+    }, 1000);
+    function scrollBottomOfMessages() {
+      messages.scrollTop = messages.scrollHeight;      
+    }
+    function logout() {
+      localStorage.clear();
+      window.location.replace("index.html");
+    }
+  </script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="sidebar">
+    <div class="sidebar-profile-picture">
+      <div class="sidebar-title">
+        Profile
+      </div>
+      <img id="img-profile-picture" width="50%" height="auto" alt="Profile Picture" src="https://www.gravatar.com/avatar/0?d=retro&f=y">
+    </div>
+    <div class="sidebar-profile-info">
+      <div id="profile-info">
+        <div id="profile-info-username">
+          username
+        </div>
+        <div id="profile-info-score">
+          Score: 0
+        </div>
+      </div>
+      <div class="sidebar-title">
+        Channel
+      </div>
+    </div>
+    <div class="sidebar-channel">
+      <div class="row">
+         <input class="nine columns" type="text" placeholder="Channel Name" id="channel-textbox" autocomplete="off" autocapitalize="none">
+         <input class="three columns button-primary" id="channel-button" type="button" value="Go" onClick="changeChannel()">
+      </div>
+    </div>
+    <div class="sidebar-actions">
+        <div class="sidebar-title">
+          Actions
+        </div>
+        <div class="row">
+          <input class="three columns button-primary action-button" id="logout-button" type="button" value="Logout" onClick="logout()">
+        </div>
+    </div>
+  </div>
+  <div id="wrapper">
+    <div id="overlay" onClick="hideSidebar()"></div>
+    <div class="header">
+      <div id="header-icon">
+        <a id="toggle">
+          <img src="vectors/menu.svg" onclick="showSidebar()" style="width: auto; height: 25px; padding: 13px;">
+        </a>
+      </div>
+      <div id="header-text">
+          Chat
+       </div>
+    </div>
+    <div class="con">
+      <div id="messages" onclick="$(messageTextbox).blur()">
+      </div>
+      <div id="compose">
+        <input type="text" id="message-textbox" autocomplete="on">
+        <input id="message-send" class="button-primary" type="button" value="Send" onClick="sendMessage()">
+      </div>
+    </div>
+  </div>
+<script>
+//sorry
+var imgPP = document.getElementById("img-profile-picture");
+var usernameText = document.getElementById("profile-info-username");
+var sidebar = document.getElementById("sidebar");
+var messageTextbox = document.getElementById("message-textbox");
+var messageSendButton = document.getElementById("message-send");
+var messages = document.getElementById("messages");
+var channelTextbox = document.getElementById("channel-textbox");
+var scoreText = document.getElementById("profile-info-score");
+var messages = document.getElementById("messages");
+var overlay = document.getElementById("overlay");
+loadPP();
+loadUsername();
+</script>
+</body>
+</html>

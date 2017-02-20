@@ -1,0 +1,111 @@
+<Window x:Name="wdwChat" x:Class="Chat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Helio"
+        mc:Ignorable="d"
+        Title="Chat" WindowState="Maximized" Width="984" d:DesignHeight="628">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource LightPrimary}"/>
+        </Grid.Background>
+        <DockPanel x:Name="pnlHeader" LastChildFill="False" Height="52" VerticalAlignment="Top">
+            <DockPanel.Background>
+                <SolidColorBrush Color="{DynamicResource Primary}"/>
+            </DockPanel.Background>
+            <Label x:Name="lblHeader" Content="Chat" VerticalAlignment="Top" Foreground="White" FontFamily="Comfortaa" FontSize="24" HorizontalAlignment="Left" Width="76" Margin="7,7,0,0"/>
+        </DockPanel>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Margin="313,57,0,0" BorderBrush="{x:Null}" Width="663" d:LayoutOverrides="Height">
+            <TabControl.Background>
+                <SolidColorBrush Color="{DynamicResource LightPrimary}"/>
+            </TabControl.Background>
+            <TabControl.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TabControl.Resources>
+            <TabItem Header="Chat">
+                <TabItem.Background>
+                    <SolidColorBrush Color="{DynamicResource Accent}"/>
+                </TabItem.Background>
+                <Grid Margin="0,2.96,0,0">
+                    <TextBox x:Name="txtMsg" Height="45" Margin="10,0,94,10" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="21" BorderBrush="#00ABADB3" Foreground="White" Padding="5" SelectionOpacity="0">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </TextBox.Resources>
+                        <TextBox.Background>
+                            <SolidColorBrush Color="{DynamicResource DarkPrimary}"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <Button x:Name="btnSend" Content="Send" Margin="0,0,10,10" Padding="5" Foreground="White" BorderBrush="#00707070" FontSize="18" Height="45" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Background>
+                            <SolidColorBrush Color="{DynamicResource Accent}"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Feed">
+                <TabItem.Background>
+                    <SolidColorBrush Color="{DynamicResource Accent}"/>
+                </TabItem.Background>
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <StackPanel x:Name="pnlChannel" Margin="0,52,0,0" HorizontalAlignment="Left" Width="308" >
+            <StackPanel.Background>
+                <SolidColorBrush Color="{DynamicResource DarkPrimary}"/>
+            </StackPanel.Background>
+            <Label x:Name="lblHeaderProfile" Content="Profile" VerticalAlignment="Top" Foreground="White" FontFamily="Comfortaa" FontSize="22" HorizontalAlignment="Left" Width="101" Margin="7,5,0,0"/>
+            <Image x:Name="imgProfilePicture" Height="128" Margin="87,0"></Image>
+            <Label x:Name="lblProfileUsername" Content="Username" VerticalAlignment="Top" Foreground="White" FontFamily="Comfortaa" FontSize="22" Margin="0,5,0,0" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lblProfileScore" Content="Score: " VerticalAlignment="Top" Foreground="White" FontFamily="Comfortaa" FontSize="16" Margin="0,2,0,0" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lblHeaderChannel" Content="Channel" VerticalAlignment="Top" Foreground="White" FontFamily="Comfortaa" FontSize="22" HorizontalAlignment="Left" Width="101" Margin="7,5,0,0"/>
+            <StackPanel Height="70" Orientation="Horizontal">
+                <TextBox x:Name="txtChannel" Height="45" TextWrapping="Wrap" FontSize="21" BorderBrush="#00ABADB3" Foreground="White" Padding="5" SelectionOpacity="0" HorizontalAlignment="Left" Width="194" Margin="10,10,0,0" VerticalAlignment="Top">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </TextBox.Resources>
+                    <TextBox.Background>
+                        <SolidColorBrush Color="{DynamicResource Primary}"/>
+                    </TextBox.Background>
+                </TextBox>
+                <Button x:Name="btnChannel" Content="Go" Padding="5" Foreground="White" BorderBrush="#00707070" FontSize="18" Height="45" HorizontalAlignment="Right" Width="82" Margin="10,10,223,0" VerticalAlignment="Top" BorderThickness="1">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <SolidColorBrush Color="{DynamicResource Accent}"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+            <Label Visibility="Collapsed" x:Name="lblHeaderRecent" Content="Recent Channels" VerticalAlignment="Top" Foreground="White" FontFamily="Comfortaa" FontSize="22" HorizontalAlignment="Left" Width="190" Margin="7,5,0,0"/>
+            <StackPanel Visibility="Collapsed" x:Name="pnlRecents" Height="100"/>
+            <Label Visibility="Collapsed" x:Name="lblHeaderFav" Content="Favourite Channels" VerticalAlignment="Top" Foreground="White" FontFamily="Comfortaa" FontSize="22" HorizontalAlignment="Left" Width="221" Margin="7,5,0,0"/>
+            <StackPanel Visibility="Collapsed" Height="100"/>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblHeaderStatus" Content="Status" VerticalAlignment="Top" Foreground="White" FontFamily="Comfortaa" FontSize="22" HorizontalAlignment="Left" Width="78" Margin="7,5,0,0"/>
+                <Image x:Name="imgStatus" Height="14" Source="imgGood.png" Margin="0,7,0,0" RenderTransformOrigin="-14.143,4.214" Stretch="Fill" Cursor="ScrollS"/>
+            </StackPanel>
+            <StackPanel Height="100">
+                <TextBox x:Name="textBox" TextWrapping="Wrap" Background="Transparent" Foreground="White" FontSize="16" IsReadOnly="True" SelectionBrush="Transparent" Padding="7,0" BorderBrush="#00ABADB3" VerticalAlignment="Top" Height="101"/>
+            </StackPanel>
+            <Label x:Name="lblVersion" Content="b000" Foreground="White"/>
+        </StackPanel>
+
+        <StackPanel x:Name="pnlMessages" Margin="313,60,10,60" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
+
+    </Grid>
+</Window>
