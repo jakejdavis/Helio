@@ -1,1 +1,4 @@
-/MobileClient/^(hooks|platforms|plugins|res)$/* linguist-vendored
+/MobileClient/hooks/* linguist-vendored
+/MobileClient/platforms/* linguist-vendored
+/MobileClient/plugins/* linguist-vendored
+/MobileClient/res)/* linguist-vendored
