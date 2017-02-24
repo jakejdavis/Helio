@@ -4,4 +4,4 @@ Helio is an instant messenger. It aims to be simple, quick and user-intuitive. I
 The back-end is programmed in [Python](https://www.python.org/) and serves the clients using [Json](http://www.json.org/).
 There are two clients avaliable: 
 * Mobile ([Cordova](https://cordova.apache.org)) 
-* Windows (WPF)
+* Windows ([WPF](https://msdn.microsoft.com/en-us/library/ms754130(v=vs.110).aspx))
